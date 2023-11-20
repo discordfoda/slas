@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Example</title>
+</head>
+<body>
+    <h1 id="js-variable"></h1>
+
+    <script>
+        function atualizarVariavel() {
+            // Faça uma requisição AJAX para obter a nova variável do servidor
+            fetch('/get_variable')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("js-variable").innerHTML = data.variavel_python;
+                });
+        }
+
+        // Atualize a variável a cada 5 segundos
+        setInterval(atualizarVariavel, 5000);
+        
+        // Execute a função uma vez ao carregar a página
+        atualizarVariavel();
+    </script>
+</body>
+</html>
