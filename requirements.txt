@@ -1,9 +1,7 @@
-websocket-client
-tls-client
-terminut
-colored
-colorama
-veilcord
+selenium
+webdriver-manager
+flask_socketio
+regex
 requests
-toml
-httpx
+beautifulsoup4
+time
