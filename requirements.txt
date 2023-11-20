@@ -2,6 +2,5 @@ selenium
 webdriver-manager
 flask_socketio
 regex
-requests
 beautifulsoup4
 time
