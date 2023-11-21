@@ -23,7 +23,7 @@ codigos = ''
 numeros = []
 verify = False
 
-CORS(app, origins=["https://slas-beta.vercel.app", 'https://slas-discordfodas-projects.vercel.app', 'https://slas-git-main-discordfodas-projects.vercel.app'])
+CORS(app)
         
 @app.route("/")
 def teste():
