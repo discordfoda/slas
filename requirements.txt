@@ -4,3 +4,4 @@ Flask-SocketIO==5.3.6
 regex==2023.10.3
 beautifulsoup4==4.12.2
 requests==2.31.0
+Flask-Cors==4.0.0
