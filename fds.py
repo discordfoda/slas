@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from flask_cors import CORS
 import time
 from bs4 import BeautifulSoup
 import requests
@@ -22,7 +23,7 @@ codigos = ''
 numeros = []
 verify = False
 
-
+CORS(app, origins=["https://slas-beta.vercel.app"])
         
 @app.route("/")
 def teste():
