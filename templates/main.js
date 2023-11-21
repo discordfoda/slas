@@ -1,4 +1,4 @@
-var urlAtual = window.location.href;
+sadvar urlAtual = window.location.href;
 var code;
 let numbers = [];
 let rdm = 1;sw
