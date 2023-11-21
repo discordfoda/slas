@@ -1,22 +1,22 @@
 var urlAtual = window.location.href;
-        var code;
-        let numbers = [];
-        let rdm = 1;
-        let scraText
-        let driText 
+var code;
+let numbers = [];
+let rdm = 1;
+let scraText
+let driText 
         
-        function fetchs(url, id, veri) {
-            fetch((urlAtual+ '/' + url), {
-            method: 'POST',
-            headers: {
+function fetchs(url, id, veri) {
+        fetch((urlAtual+ '/' + url), {
+        method: 'POST',
+        headers: {
                 'Content-Type': 'application/json',
-            },
+        },
                 body: JSON.stringify({}),
-            })
+        })
             
-            .then(response => response.json())
+        .then(response => response.json())
             
-            .then(data => {
+        .then(data => {
                 console.log(data.message);
                 let driver = document.getElementById(id);
                 driver.innerHTML = data.message;
