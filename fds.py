@@ -33,11 +33,12 @@ def teste():
 @app.route('/driver', methods=['POST'])
 def telegram():
     global driver
+    service = Service(executable_path='./chromedriver.exe')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(executable_path='/driver/chromedriver.exe', options=chrome_options)
+    driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get("https://web.telegram.org/k/")
 
     try:
