@@ -14,7 +14,7 @@ from flask import Flask, request, render_template, jsonify
 from threading import Thread, Lock    
 from urllib.request import Request, urlopen
 import random
-
+import os
 
 urls = ['https://smstome.com/country/denmark', 'https://smstome.com/country/united-kingdom', 'https://smstome.com/country/finland']
 app = Flask(__name__)
@@ -33,6 +33,7 @@ def teste():
 @app.route('/driver', methods=['POST'])
 def telegram():
     global driver
+    os.chmod('./driver/chromedriver.exe')
     service = Service(executable_path='./driver/chromedriver.exe')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
