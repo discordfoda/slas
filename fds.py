@@ -33,7 +33,7 @@ def teste():
 @app.route('/driver', methods=['POST'])
 def telegram():
     global driver
-    service = Service(executable_path='/driver/chromedriver.exe')
+    service = Service(executable_path='./driver/chromedriver.exe')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
