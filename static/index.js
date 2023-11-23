@@ -14,8 +14,7 @@ function fetchs(url, id, veri) {
                 body: JSON.stringify({}),
         })
             
-        .then(response => response.json())
-            
+        .then(response => {console.log(response); response.json();})
         .then(data => {
                 console.log(data.message);
                 let driver = document.getElementById(id);
